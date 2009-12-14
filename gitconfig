@@ -1,0 +1,26 @@
+[user]
+  name = Benedict Eastaugh
+  email = benedict@eastaugh.net
+
+[apply]
+  whitespace = strip
+
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+
+[diff]
+  color = auto
+
+[pager]
+  color = true
+
+[status]
+  color = auto
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
