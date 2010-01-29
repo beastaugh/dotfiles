@@ -14,6 +14,9 @@ alias ll="ls -l"
 alias la="ls -A"
 alias lla="ls -lA"
 
+# Use hub with git
+alias git="hub"
+
 # Always accept gzipped content when using cURL
 alias curl="curl -H 'Accept-Encoding: gzip' --compressed"
 
