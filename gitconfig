@@ -9,6 +9,7 @@
   st = status
   ci = commit
   co = checkout
+  cp = cherry-pick
 
 [diff]
   color = auto
@@ -18,6 +19,9 @@
 
 [status]
   color = auto
+
+[core]
+  autocrlf = input
 
 [color]
   diff = auto
