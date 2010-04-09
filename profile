@@ -42,3 +42,13 @@ PS1="$YELLOW\w$RED\$(parse_git_branch) $GREEN\$ $NORMAL"
 
 # Colours
 export CLICOLOR=1
+
+# Maven config
+export MAVEN_OPTS="-Xms128M -Xmx256M -Djava.awt.headless=true"
+export OTHEROBJECTS_HOME="~/projects/oo"
+export PATH="$OTHEROBJECTS_HOME/bin:$PATH"
+
+# SSH hostname autocompletion
+complete -W "$(echo $(cat ~/.ssh/known_hosts | \
+    cut -f 1 -d ' ' | sed -e s/,.*//g | \
+    sort -u | grep -v "\["))" ssh
