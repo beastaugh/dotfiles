@@ -1,5 +1,5 @@
 # Add homebrew binaries and /usr/local to the $PATH
-export PATH="/usr/local/homebrew/bin:~/.cabal/bin:/usr/local/bin:$PATH"
+export PATH="/usr/local/homebrew/bin:~/bin:~/.cabal/bin:/usr/local/bin:$PATH"
 
 # Gem path using homebrew
 export GEM_HOME="$(brew --prefix)/Cellar/Gems/1.9"
@@ -10,9 +10,9 @@ export GIT_EDITOR="nano"
 export SVN_EDITOR="nano"
 
 # ls aliases
-alias ll="ls -l"
-alias la="ls -A"
-alias lla="ls -lA"
+alias ll="ls -lh"
+alias la="ls -Ah"
+alias lla="ls -lAh"
 
 # Use hub with git
 alias git="hub"
@@ -42,6 +42,7 @@ PS1="$YELLOW\w$RED\$(parse_git_branch) $GREEN\$ $NORMAL"
 
 # Colours
 export CLICOLOR=1
+export LSCOLORS="exfxcxdxbxegedabagacad"
 
 # Maven config
 export MAVEN_OPTS="-Xms128M -Xmx256M -Djava.awt.headless=true"
