@@ -49,7 +49,7 @@ export LSCOLORS="exfxcxdxbxegedabagacad"
 
 # Maven config
 export MAVEN_OPTS="-Xms128M -Xmx256M -Djava.awt.headless=true"
-export OTHEROBJECTS_HOME="~/projects/oo"
+export OTHEROBJECTS_HOME="/Users/beastaugh/projects/oo"
 export PATH="$OTHEROBJECTS_HOME/bin:$PATH"
 
 # SSH hostname autocompletion
