@@ -24,6 +24,7 @@
 
 [core]
   autocrlf = input
+  excludesfile = /Users/beastaugh/.gitignore
 
 [color]
   diff = auto
