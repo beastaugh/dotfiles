@@ -1,0 +1,15 @@
+[ui]
+username = Benedict Eastaugh <beastaugh@othermedia.com>
+verbose = True
+
+[extensions]
+color=
+hgsubversion=
+
+# convert from SCMs
+hgext.convert=
+rebase=
+
+[diff]
+ignorewsamount=
+ignoreblanklines=
