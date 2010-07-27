@@ -47,7 +47,8 @@ PS1="$YELLOW\w$RED\$(parse_git_branch) $GREEN\$ $NORMAL"
 export CLICOLOR=1
 export LSCOLORS="exfxcxdxbxegedabagacad"
 
-# Maven config
+# Java / Maven config
+export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
 export MAVEN_OPTS="-Xms128M -Xmx256M -Djava.awt.headless=true"
 export OTHEROBJECTS_HOME="/Users/beastaugh/projects/oo"
 export PATH="$OTHEROBJECTS_HOME/bin:$PATH"
