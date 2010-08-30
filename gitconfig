@@ -24,3 +24,7 @@
   status = auto
   branch = auto
   interactive = auto
+[push]
+  default = tracking
+[branch]
+  autosetuprebase = always
