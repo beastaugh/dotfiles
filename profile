@@ -1,5 +1,5 @@
 # Add homebrew binaries and /usr/local to the $PATH
-export PATH="/usr/local/homebrew/bin:/usr/local/homebrew/sbin:~/bin:/usr/local/bin:~/.cabal/bin:$PATH"
+export PATH="/usr/local/homebrew/bin:/usr/local/homebrew/sbin:/usr/local/homebrew/share/npm/bin:~/bin:/usr/local/bin:~/.cabal/bin:$PATH"
 
 # Gem path using homebrew
 export GEM_HOME="$(brew --prefix)/Cellar/Gems/1.9"
