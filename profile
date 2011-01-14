@@ -1,5 +1,5 @@
 # Add homebrew binaries and /usr/local to the $PATH
-export PATH="/usr/local/homebrew/bin:/usr/local/homebrew/sbin:/usr/local/homebrew/share/npm/bin:~/bin:/usr/local/bin:~/.cabal/bin:$PATH"
+export PATH="$HOME/.cabal/bin:/usr/local/homebrew/bin:/usr/local/homebrew/sbin:/usr/local/homebrew/share/npm/bin:$HOME/bin:/usr/local/bin:$PATH"
 
 # Gem path using homebrew
 export GEM_HOME="$(brew --prefix)/Cellar/Gems/1.9"
@@ -44,7 +44,7 @@ function _complete_git_branch {
 }
 
 # Autocomplete Git branch names when using the checkout command
-complete -F _complete_git_branch git checkout
+#complete -F _complete_git_branch git checkout
 
 # Colours
 NORMAL="\[\033[m\]"
@@ -59,13 +59,7 @@ PS1="$YELLOW\w$RED\$(parse_git_branch) $GREEN\$ $NORMAL"
 export CLICOLOR=1
 export LSCOLORS="exfxcxdxbxegedabagacad"
 
-# Java / Maven config
-export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
-export MAVEN_OPTS="-Xms128M -Xmx256M -Djava.awt.headless=true"
-export OTHEROBJECTS_HOME="/Users/beastaugh/projects/oo"
-export PATH="$OTHEROBJECTS_HOME/bin:$PATH"
-
 # SSH hostname autocompletion
-complete -W "$(echo $(cat ~/.ssh/known_hosts | \
+complete -W "$(echo $(cat $HOME/.ssh/known_hosts | \
     cut -f 1 -d ' ' | sed -e s/,.*//g | \
     sort -u | grep -v "\["))" ssh
