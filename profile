@@ -20,9 +20,6 @@ alias git="hub"
 # Always accept gzipped content when using cURL
 alias curl="curl -H 'Accept-Encoding: gzip' --compressed"
 
-# Wrap Node REPL with readline
-alias node-repl="rlwrap node-repl"
-
 # Tweak history settings
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
