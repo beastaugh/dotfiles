@@ -31,17 +31,8 @@ function parse_git_branch {
   echo " ("${ref#refs/heads/}")"
 }
 
-# Autocomplete Git branch names
-function _complete_git_branch {
-  if [ -d .git ]; then
-    branches=`git branch -a | cut -c 3-`
-    cur="${COMP_WORDS[COMP_CWORD]}"
-    COMPREPLY=( $(compgen -W "${branches}" -- ${cur}) )
-  fi
-}
-
-# Autocomplete Git branch names when using the checkout command
-#complete -F _complete_git_branch git checkout
+# Bash autocompletion for Git
+source "/usr/local/etc/bash_completion.d/git-completion.bash"
 
 # Colours
 NORMAL="\[\033[m\]"
