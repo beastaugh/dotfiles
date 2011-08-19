@@ -25,6 +25,9 @@ export HISTCONTROL=erasedups
 export HISTSIZE=10000
 shopt -s histappend
 
+# Command tab-completion for Homebrew
+source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
+
 # To show current Git branch
 function parse_git_branch {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
