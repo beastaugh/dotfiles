@@ -4,6 +4,7 @@ export PATH="$HOME/.cabal/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 # Gem path using homebrew
 export GEM_HOME="$(brew --prefix)/Cellar/Gems/1.9"
 export GEM_PATH="$(brew --prefix)/Cellar/Gems/1.9"
+export PATH="$(brew --prefix)/Cellar/Gems/1.9/bin/:$PATH"
 
 # Default editors for VCSs
 export GIT_EDITOR="nano"
