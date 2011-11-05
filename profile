@@ -38,6 +38,9 @@ function parse_git_branch {
 # Bash autocompletion for Git
 source "/usr/local/etc/bash_completion.d/git-completion.bash"
 
+# Bash autocompletion for SSH hosts
+source "/usr/local/etc/bash_completion.d/ssh-host-completion.sh"
+
 # Colours
 NORMAL="\[\033[m\]"
 RED="\[\033[0;31m\]"
