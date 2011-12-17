@@ -26,20 +26,22 @@ export HISTCONTROL=erasedups
 export HISTSIZE=10000
 shopt -s histappend
 
-# Command tab-completion for Homebrew
-source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
-
 # To show current Git branch
 function parse_git_branch {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
   echo " ("${ref#refs/heads/}")"
 }
 
-# Bash autocompletion for Git
-source "/usr/local/etc/bash_completion.d/git-completion.bash"
+# Bash autocompletion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
 
-# Bash autocompletion for SSH hosts
-source "/usr/local/etc/bash_completion.d/ssh-host-completion.sh"
+# Command tab-completion for Homebrew
+source "`brew --prefix`/etc/bash_completion.d/brew_bash_completion.sh"
+
+# Bash autocompletion for Git
+source "`brew --prefix`/etc/bash_completion.d/git-completion.bash"
 
 # Colours
 NORMAL="\[\033[m\]"
