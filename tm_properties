@@ -1,4 +1,50 @@
-softWrap = true
-showInvisibles = true
+# Basic display settings
+fontName = "Monaco"
+fontSize = 10
+
+# Dotfiles to show
+extraIncludes   = ".tm_properties,.htaccess,.gitignore"
+fileBrowserGlob = "{*,$extraIncludes}"
+include         = "{$include,$extraIncludes}"
+
+# Hide log, vendor and tmp directories from search popups
+extraExcludes         = "log,vendor,tmp"
+excludeInFileChooser  = "{$excludeInFileChooser,$extraExcludes}"
+excludeInFolderSearch = "{$excludeInFolderSearch,$excludeInFolderSearch}"
+
+# Paths to git and hg
+TM_HG  = "/usr/local/bin/hg"
+TM_GIT = "/usr/local/bin/git"
+
+# Default editing settings
+softWrap                 = true
+showInvisibles           = true
+tabSize                  = 4
+softTabs                 = true
+disableIndentCorrections = true
+indentOnPaste            = "simple"
+spellChecking            = true
+spellingLanguage         = 'en_GB'
+
+# File type and source language-specific settings
+
+[ *.{icns,ico,jpg,jpeg,m4v,nib,pdf,png,psd,pyc,rtf,tif,tiff,xib} ]
+binary = true
+
+[ source.haskell ]
+tabSize = 4
+
+[ source.javascript ]
+tabSize = 4
+
+[ source.c ]
+tabSize = 4
+
+[ source.ruby ]
 tabSize = 2
-softTabs = true
+
+[ source.markdown ]
+tabSize = 2
+
+[ "{README,INSTALL,LICENSE,COPYRIGHT,CHANGELOG,TODO,}" ]
+fileType = "text.plain"
