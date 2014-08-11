@@ -1,23 +1,32 @@
 #!/usr/bin/env ruby
 
-home_dir = Dir.pwd.sub(ENV['HOME'] + '/', '')
-
 dotfiles = [
+  # Bash profile
   'profile',
+  
+  # TextMate properties file
   'tm_properties',
+  
+  # Git config files
   'gitignore',
   'gitconfig',
-  'hgrc',
+  
+  # GHCI config file
   'ghci',
+  
+  # RubyGems config file
   'gemrc'
 ]
 
-dotfiles_dir = Dir.pwd.sub(home_dir + '/', '')
-
 dotfiles.each do |file|
-  target = File.join(home_dir, file)
+  target = File.join(Dir.home, '.' + file)
+  source = File.join(Dir.getwd, file)
   
-  unless File.exist? target
-    system %[ln -vsf #{File.join(dotfiles_dir, '.' + file)} #{target}]
+  if File.exist? target
+    puts "The file #{target} already exists"
+  else
+    cmd = %[ln -vsf #{source} #{target}]
+    puts "Linked #{source} to #{target}"
+    system cmd
   end
 end
