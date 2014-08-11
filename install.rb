@@ -1,18 +1,23 @@
 #!/usr/bin/env ruby
 
-# from http://errtheblog.com/posts/89-huba-huba
+home_dir = Dir.pwd.sub(ENV['HOME'] + '/', '')
 
-home = ENV['HOME']
+dotfiles = [
+  'profile',
+  'tm_properties',
+  'gitignore',
+  'gitconfig',
+  'hgrc',
+  'ghci',
+  'gemrc'
+]
 
-Dir.chdir File.dirname(__FILE__) do
-  dotfiles_dir = Dir.pwd.sub(home + '/', '')
+dotfiles_dir = Dir.pwd.sub(home_dir + '/', '')
+
+dotfiles.each do |file|
+  target = File.join(home_dir, file)
   
-  Dir['*'].each do |file|
-    next if file == 'install.rb'
-    target_name = file == 'bin' ? file : ".#{file}"
-    target = File.join(home, target_name)
-    unless File.exist? target
-      system %[ln -vsf #{File.join(dotfiles_dir, file)} #{target}]
-    end
+  unless File.exist? target
+    system %[ln -vsf #{File.join(dotfiles_dir, '.' + file)} #{target}]
   end
 end
