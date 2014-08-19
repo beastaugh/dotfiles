@@ -24,8 +24,8 @@ softTabs                 = true
 disableIndentCorrections = true
 indentOnPaste            = "simple"
 spellChecking            = true
-spellingLanguage         = 'en_GB'
-
+spellingLanguage         = "en_GB"
+invisiblesMap            = "~ \t┊"
 # File type and source language-specific settings
 
 [ *.{icns,ico,jpg,jpeg,m4v,nib,pdf,png,psd,pyc,rtf,tif,tiff,xib} ]
