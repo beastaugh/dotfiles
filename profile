@@ -27,6 +27,9 @@ alias curl="curl -H 'Accept-Encoding: gzip' --compressed"
 # Alias texcount with usual options to something shorter
 alias tc="texcount -sub=section -merge -unicode"
 
+# Alias paper creation command
+alias mkpaper="ruby ~/projects/utils/mkpaper.rb"
+
 # Tweak history settings
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
